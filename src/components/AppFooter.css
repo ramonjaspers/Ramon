@@ -1,0 +1,115 @@
+.app-footer {
+  position: relative;
+  z-index: 10;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(20, 30, 48, 0.6) 20%,
+    rgba(20, 30, 48, 0.95) 100%
+  );
+  backdrop-filter: blur(20px);
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social a:hover {
+  color: var(--color-white);
+  background: rgba(160, 196, 255, 0.15);
+  border-color: rgba(160, 196, 255, 0.3);
+  transform: translateY(-4px);
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(160, 196, 255, 0.15);
+}
+
+.footer-social a svg {
+  width: 22px;
+  height: 22px;
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.95rem;
+  margin: 0 0 var(--spacing-md) 0;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.footer-tech {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 0;
+}
+
+.tech-badge {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--spacing-xl);
+  font-weight: 600;
+  font-size: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-clip: padding-box;
+  transition: all 0.3s ease;
+}
+
+.vue {
+  color: var(--color-vue);
+}
+
+.ts {
+  color: var(--color-ts);
+}
+
+.tech-badge:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .app-footer {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+
+  .footer-social a {
+    width: 44px;
+    height: 44px;
+  }
+
+  .footer-social a svg {
+    width: 20px;
+    height: 20px;
+  }
+}

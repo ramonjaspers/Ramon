@@ -1,0 +1,28 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.skills-grid h3 {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--heading-color);
+}
+
+.skills-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-grid li {
+  margin-bottom: var(--spacing-sm);
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}

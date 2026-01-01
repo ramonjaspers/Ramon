@@ -1,0 +1,11 @@
+.particle-portrait {
+  cursor: crosshair;
+  display: block;
+  border-radius: 50%;
+  background: transparent;
+  transition: transform 0.3s ease;
+}
+
+.particle-portrait:hover {
+  transform: scale(1.02);
+}

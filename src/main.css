@@ -1,0 +1,114 @@
+:root {
+  /* ----------Globals---------- */
+  /* Primary Colors */
+  --color-primary: #028049; /* Brand green - main background */
+  --color-primary-light: #04d68f; /* Accent green - highlights, links */
+
+  /* Secondary Colors */
+  --color-secondary: #a0c4ff; /* Soft blue - gradients, accents */
+
+  /* Neutral Colors */
+  --color-white: #ffffff; /* Pure white */
+  --color-black: #000000; /* Pure black */
+  --color-gray-dark: #111111; /* Headings, dark text */
+  --color-gray-medium: #333333; /* Body text */
+  --color-gray-light: #666666; /* Subtle text, accents */
+
+  /* Special Colors */
+  --color-vue: #42b883; /* Vue.js green - tech badge */
+  --color-ts: #3178c6; /* TypeScript blue - tech badge */
+
+  --text-color: var(--color-gray-medium);
+  --heading-color: var(--color-gray-dark);
+  --accent-color: var(--color-gray-light);
+  --bg-color: var(--color-primary);
+  --border-color: #eeeeee;
+
+  /* Typography */
+  --font-family:
+    system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --line-height: 1.6;
+
+  /* Spacing */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+}
+
+/* Base */
+body {
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4 {
+  color: var(--heading-color);
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: var(--spacing-sm);
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+@media print {
+  body {
+    background-color: var(--color-white);
+  }
+
+  main {
+    padding: 0;
+    margin: 0;
+  }
+
+  header,
+  footer {
+    display: none !important;
+  }
+}

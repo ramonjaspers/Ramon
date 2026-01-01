@@ -1,0 +1,22 @@
+#education article {
+  margin-bottom: var(--spacing-xl);
+}
+
+#education article header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--spacing-sm);
+  border: none;
+  padding: 0;
+}
+
+#education article h3 {
+  margin: 0;
+}
+
+#education article header p {
+  margin: 0;
+  color: var(--accent-color);
+  font-size: 0.9em;
+}
