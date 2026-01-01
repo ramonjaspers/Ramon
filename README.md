@@ -1,4 +1,5 @@
 # Ramon Jaspers - Personal CV / Resume
+Blue is for react, green is for vue, so i made this one green not blue.
 
 A tryout with Vue 3 for a modern, interactive CV website built with TypeScript and Vite.
 
@@ -8,7 +9,6 @@ V2 - Move to Vue 3 and add router and sections
 V3 - Add skills, work history, a CV view and fancy particles
 
 ## ✨ Features
-
 - **Modern Design** - Glassmorphism aesthetics with gradient backgrounds and subtle animations
 - **Particle Portrait** - Interactive canvas-based portrait that responds to mouse/touch
 - **Responsive** - Fully responsive layout that works on all devices
@@ -18,7 +18,6 @@ V3 - Add skills, work history, a CV view and fancy particles
 - **Type-Safe** - Full TypeScript support throughout the codebase
 
 ## 🛠️ Tech Stack
-
 - **Framework**: [Vue 3](https://vuejs.org/) with Composition API
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Build Tool**: [Vite](https://vitejs.dev/)
@@ -26,9 +25,7 @@ V3 - Add skills, work history, a CV view and fancy particles
 - **Styling**: Vanilla CSS with CSS Variables
 - **Linting**: ESLint + Prettier
 
-
 ## 🎨 Color Palette
-
 The project uses a standardized 10-color palette defined in `src/main.css`:
 
 | Variable                | Color     | Usage                        |
@@ -43,4 +40,3 @@ The project uses a standardized 10-color palette defined in `src/main.css`:
 | `--color-gray-light`    | `#666666` | Subtle text, accents         |
 | `--color-vue`           | `#42b883` | Vue.js green, tech badge     |
 | `--color-ts`            | `#3178c6` | TypeScript blue, tech badge  |
-
