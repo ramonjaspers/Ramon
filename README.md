@@ -4,9 +4,9 @@ Blue is for react, green is for vue, so i made this one green not blue.
 A tryout with Vue 3 for a modern, interactive CV website built with TypeScript and Vite.
 
 ## Versions:
-V1 - Initial mockup with reactive cursor glow and floating text
-V2 - Move to Vue 3 and add router and sections
-V3 - Add skills, work history, a CV view and fancy particles
+V1 - Initial mockup with reactive cursor glow and floating text<br />
+V2 - Move to Vue 3 and add router and sections<br />
+V3 - Add skills, work history, a CV view and fancy particles<br />
 
 ## ✨ Features
 - **Modern Design** - Glassmorphism aesthetics with gradient backgrounds and subtle animations
