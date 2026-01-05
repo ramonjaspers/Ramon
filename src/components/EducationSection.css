@@ -1,4 +1,4 @@
-#education article {
+#education {
   margin-bottom: var(--spacing-xl);
 }
 
@@ -6,7 +6,6 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: var(--spacing-sm);
   border: none;
   padding: 0;
 }

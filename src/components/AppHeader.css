@@ -43,7 +43,7 @@ header nav a:hover {
   margin-left: var(--spacing-lg);
 }
 
-.nav-sections ul {
+.nav-section ul {
   display: flex;
   gap: var(--spacing-lg);
   list-style: none;

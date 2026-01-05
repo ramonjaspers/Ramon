@@ -3,6 +3,7 @@ import { RouterLink } from 'vue-router'
 
 const navItems = [
   { label: 'About', target: 'about' },
+  { label: 'About', target: 'about' },
   { label: 'Experience', target: 'experience' },
   { label: 'Skills', target: 'skills' },
   { label: 'Education', target: 'education' },
@@ -17,12 +18,12 @@ const scrollToSection = (id: string) => {
 </script>
 
 <template>
-  <header>
+  <header class="app-header">
     <nav class="nav-main">
       <RouterLink to="/">Home</RouterLink>
       <a href="https://github.com/ramonjaspers" class="nav-github"> GitHub </a>
     </nav>
-    <nav class="nav-sections">
+    <nav class="nav-section">
       <ul>
         <li v-for="item in navItems" :key="item.label">
           <a

@@ -34,7 +34,6 @@ import { profile } from '../data/profile'
         </div>
       </article>
     </div>
-    <hr />
   </section>
 </template>
 

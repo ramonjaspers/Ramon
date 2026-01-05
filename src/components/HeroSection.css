@@ -1,12 +1,10 @@
-#about {
-  margin-bottom: var(--spacing-2xl);
+#about{
+  margin-bottom: var(--spacing-xl);
 }
-
 .contact-info {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: var(--spacing-xl);
 }
 
 .contact-details {
@@ -25,6 +23,5 @@
 }
 
 .about-text {
-  margin-bottom: var(--spacing-xl);
   white-space: pre-line;
 }

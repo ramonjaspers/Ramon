@@ -38,7 +38,6 @@ import { profile } from '../data/profile'
     <div class="about-text">
       <p>{{ profile.about }}</p>
     </div>
-    <hr />
   </section>
 </template>
 
