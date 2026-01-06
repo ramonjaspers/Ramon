@@ -40,5 +40,3 @@ import { profile } from '../data/profile'
     </div>
   </section>
 </template>
-
-<style src="./HeroSection.css"></style>

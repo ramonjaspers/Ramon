@@ -37,5 +37,3 @@ const scrollToSection = (id: string) => {
     </nav>
   </header>
 </template>
-
-<style src="./AppHeader.css"></style>

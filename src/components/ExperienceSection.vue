@@ -36,5 +36,3 @@ import { profile } from '../data/profile'
     </div>
   </section>
 </template>
-
-<style src="./ExperienceSection.css"></style>

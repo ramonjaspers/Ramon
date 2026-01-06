@@ -6,7 +6,7 @@ import { profile } from '../data/profile'
   <section id="skills">
     <h2>Core skills</h2>
     <div class="tech-skills">
-      <ul>
+      <ul class="cv-grid-list">
         <li v-for="(skill, index) in profile.skills" :key="index">
           <strong>{{ skill.name }}</strong> — {{ skill.years }}
           {{ skill.years === 1 ? 'yr' : 'yrs' }}
@@ -15,5 +15,3 @@ import { profile } from '../data/profile'
     </div>
   </section>
 </template>
-
-<style src="./CoreSkills.css"></style>

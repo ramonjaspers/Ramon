@@ -6,7 +6,7 @@ import { profile } from '../data/profile'
   <section id="certificates">
     <div class="certificates">
       <h2>Certificates</h2>
-      <ul>
+      <ul class="cv-grid-list">
         <li v-for="(cert, index) in profile.certificates" :key="index">
           <strong>{{ cert.name }}</strong> — {{ cert.year }}
         </li>
@@ -14,5 +14,3 @@ import { profile } from '../data/profile'
     </div>
   </section>
 </template>
-
-<style src="./CertificateSection.css"></style>
