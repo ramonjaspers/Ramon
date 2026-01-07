@@ -124,7 +124,7 @@
 }
 
 /* Responsive */
-@media (min-width: 768px) {
+@media (min-width: 1075px) {
   .intro-content {
     flex-direction: row;
     justify-content: center;

@@ -272,3 +272,10 @@ article header p {
     flex: 1 0 25%;
   }
 }
+
+@media print {
+  .app-header,
+  .app-footer {
+    display: none;
+  }
+}
