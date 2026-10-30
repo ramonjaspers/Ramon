@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { profile } from '../data/profile'
+import { formatYears } from '../utils/formatYears'
 </script>
 
 <template>
@@ -7,9 +8,9 @@ import { profile } from '../data/profile'
     <h2>Core skills</h2>
     <div class="tech-skills">
       <ul class="cv-grid-list">
-        <li v-for="(skill, index) in profile.skills" :key="index">
-          <strong>{{ skill.name }}</strong> — {{ skill.years }}
-          {{ skill.years === 1 ? 'yr' : 'yrs' }}
+        <li v-for="skill in profile.skills" :key="skill.name">
+          <strong>{{ skill.name }}</strong> —
+          {{ formatYears(skill.years, true) }}
         </li>
       </ul>
     </div>

@@ -1,82 +1,40 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
-import { setupCursorGlow } from '../utils/cursor'
 import { profile } from '../data/profile'
+import AmbientField from '../components/AmbientField.vue'
 import IntroSection from '../components/IntroSection.vue'
+import PortfolioTerminal from '../components/PortfolioTerminal.vue'
 import SectionCard from '../components/SectionCard.vue'
 import WorkHistorySection from '../components/WorkHistorySection.vue'
+import { formatYears } from '../utils/formatYears'
 import headShot from '../assets/headShot.png'
 
-const backgroundPhrases = [
-  'complexity is redundancy',
-  'simplicity is brilliance',
-  'elegance is efficiency',
-  'clarity is power',
-  'less is more',
-  'craft is care',
-  'precision is key',
-  'focus is strength',
-  'intentionality is quality',
-]
-
-const floatingTexts = Array.from({ length: 100 }).map((_, index) => ({
-  id: index,
-  text: backgroundPhrases[index % backgroundPhrases.length],
-  style: {
-    top: `${Math.random() * 100}%`,
-    left: `${Math.random() * 100}%`,
-    fontSize: `${2 + Math.random() * 4}rem`,
-    opacity: 0.03 + Math.random() * 0.05,
-    animationDuration: `${40 + Math.random() * 60}s`,
-    animationDelay: `-${Math.random() * 60}s`,
-    '--drift-x': `${(Math.random() - 0.5) * 40}vw`,
-    '--drift-y': `${(Math.random() - 0.5) * 40}vh`,
-  },
-}))
-
-const maxYears = 8
+const maxSkillYears = Math.max(...profile.skills.map((skill) => skill.years))
 
 const aboutParagraphs = profile.about.split('\n\n')
-
-let cleanup: (() => void) | undefined
-
-onMounted(() => {
-  cleanup = setupCursorGlow()
-})
-
-onUnmounted(() => {
-  cleanup?.()
-})
 </script>
 
 <template>
   <div class="home-page">
+    <AmbientField />
     <nav class="navbar">
-      <RouterLink to="/" class="nav-link">Home</RouterLink>
-      <RouterLink to="/cv" class="nav-link">CV</RouterLink>
-      <a
-        href="https://github.com/ramonjaspers"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="nav-link"
-      >
-        GitHub
-      </a>
-    </nav>
-
-    <div>
-      <div class="background-text">
-        <span
-          v-for="item in floatingTexts"
-          :key="item.id"
-          class="moving"
-          :style="item.style"
+      <RouterLink to="/" class="nav-brand">
+        Ramon Jaspers<span>.</span>
+      </RouterLink>
+      <div class="nav-links">
+        <RouterLink to="/cv" class="nav-link">CV</RouterLink>
+        <a
+          href="https://github.com/ramonjaspers"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-link"
         >
-          {{ item.text }}
-        </span>
+          GitHub
+        </a>
+        <a :href="`mailto:${profile.email}`" class="nav-contact">Contact</a>
+        <PortfolioTerminal />
       </div>
-    </div>
+    </nav>
 
     <IntroSection />
 
@@ -112,13 +70,13 @@ onUnmounted(() => {
           <div class="skill-header">
             <span class="skill-name">{{ skill.name }}</span>
             <span class="skill-years">
-              {{ skill.years }} {{ skill.years === 1 ? 'year' : 'years' }}
+              {{ formatYears(skill.years) }}
             </span>
           </div>
           <div class="skill-bar">
             <div
               class="skill-bar-fill"
-              :style="{ width: `${(skill.years / maxYears) * 100}%` }"
+              :style="{ width: `${(skill.years / maxSkillYears) * 100}%` }"
             />
           </div>
         </div>
@@ -135,8 +93,6 @@ onUnmounted(() => {
         </a>
       </p>
     </SectionCard>
-
-    <div class="cursor-glow"></div>
   </div>
 </template>
 

@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { profile } from '../data/profile'
 
 const activeIndex = ref(0)
-
-const activeJob = () => profile.experience[activeIndex.value]
+const activeJob = computed(() => profile.experience[activeIndex.value])
 </script>
 
 <template>
@@ -27,28 +26,28 @@ const activeJob = () => profile.experience[activeIndex.value]
 
         <div class="job-details">
           <h3 class="job-role">
-            {{ activeJob().role }}
-            <span class="job-company">@ {{ activeJob().company }}</span>
+            {{ activeJob.role }}
+            <span class="job-company">@ {{ activeJob.company }}</span>
           </h3>
 
-          <p class="job-period">{{ activeJob().period }}</p>
+          <p class="job-period">{{ activeJob.period }}</p>
 
-          <p v-if="activeJob().stack" class="job-stack">
-            <span class="stack-label">Tech:</span> {{ activeJob().stack }}
+          <p v-if="activeJob.stack" class="job-stack">
+            <span class="stack-label">Tech:</span> {{ activeJob.stack }}
           </p>
 
           <p class="job-description">
-            {{ activeJob().description }}
+            {{ activeJob.description }}
           </p>
 
           <a
-            v-if="activeJob()?.url"
-            :href="activeJob()?.url"
+            v-if="activeJob.url"
+            :href="activeJob.url"
             target="_blank"
             rel="noopener noreferrer"
             class="job-link"
           >
-            {{ activeJob()?.url?.replace('https://', '').replace('www.', '') }}
+            {{ activeJob.url.replace('https://', '').replace('www.', '') }}
           </a>
         </div>
       </div>
