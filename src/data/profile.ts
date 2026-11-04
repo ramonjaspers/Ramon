@@ -1,8 +1,6 @@
 export const profile = {
   name: 'Ramon Jaspers',
   role: 'Frontend developer',
-  headline:
-    'Hi my name is Ramon 👋. I am a result driven developer with more than eight years of expertise in creating and delivering scalable web and mobile solutions. Currently I am driving FM Group their digital transformation as a Lead Developer.',
   location: 'The Hague, The Netherlands',
   phone: 'redacted4Now',
   email: 'Jaspers.ramon@gmail.com',
@@ -19,27 +17,37 @@ export const profile = {
     { name: 'Typecursus - LOI', year: '2009' },
   ],
   skills: [
-    { name: 'Git', years: 7 },
-    { name: 'TypeScript', years: 6 },
-    { name: 'React', years: 6 },
-    { name: 'React Native', years: 5 },
+    { name: 'Git', years: 9 },
+    { name: 'TypeScript', years: 8 },
+    { name: 'React', years: 8 },
+    { name: 'React Native', years: 7 },
     { name: 'Redux', years: 4 },
-    { name: 'TanStack Query', years: 3 },
+    { name: 'TanStack Query', years: 4 },
     { name: 'Node.js', years: 3 },
-    { name: 'Expo', years: 3 },
+    { name: 'Expo', years: 4 },
     { name: 'Azure', years: 3 },
-    { name: 'CI/CD', years: 3 },
+    { name: 'CI/CD', years: 4 },
     { name: 'PHP', years: 2 },
     { name: 'Python', years: 1 },
   ],
-  about: `I am a result driven developer with more than eight years of expertise in creating and delivering scalable web and mobile solutions. Currently I am driving FM Group their digital transformation as a Lead Developer. For which I designed and created design systems, component libraries and company-wide frontend standards. Next to greenfield experience I am comfortable with legacy projects lifting them to modern standards like converting JS code to TS, Redux to RTK or ReactQuery and RN projects to Expo. 
+  about: `I am a result driven developer with more than nine years of expertise in creating and delivering scalable web and mobile solutions. Currently I am working on the ANWB Energie mobile app as a React Native Developer with a focus on user experience. Before that I drove FM Group their digital transformation as a Lead Developer, where I designed and created design systems, component libraries and company-wide frontend standards. Next to greenfield experience I am comfortable with legacy projects lifting them to modern standards like converting JS code to TS, Redux to RTK or ReactQuery and RN projects to Expo. 
   
 I am a real people person and prefer face to face contact. In my freetime I like go to the theater 🎭, bake something sweet 🥧, go for a hike 🏞️, do a little gaming now and then ♟️, go to the gym 🏋️, do some socializing 🍺, tinker on my motorcycle 🏍️ and pretend to be bob the builder; renovating my house 🔨👷.`,
   experience: [
     {
+      company: 'ANWB',
+      role: 'React Native Developer - Energie',
+      period: 'Apr. 2026 - Present',
+      location: 'The Hague',
+      url: 'https://www.anwb.nl/energie/anwb-energie-app',
+      stack: 'React Native, Expo, AWS, EAS',
+      description:
+        'React Native developer for the ANWB Energie mobile app team.',
+    },
+    {
       company: 'FM Group',
       role: 'Lead Developer - Digital Sales',
-      period: 'Jan. 2024 - Present',
+      period: 'Jan. 2024 - Mar. 2026',
       location: 'Aalsmeer',
       url: 'https://www.fleurametz.com/nl/app',
       stack: 'React (Native), Expo, CI/CD, Packaging, Zebra scanners',

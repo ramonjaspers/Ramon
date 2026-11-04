@@ -28,7 +28,7 @@ export const resolveTerminalCommand = (
     case 'about':
     case 'whoami':
       return {
-        lines: [profile.name, profile.role, profile.location, profile.headline],
+        lines: [profile.name, profile.role, profile.location],
       }
     case 'skills':
       return {
